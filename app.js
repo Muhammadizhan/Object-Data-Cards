@@ -53,20 +53,18 @@ const users = [
 
 console.log(users);
 
-for (let i = 0; i < users.length; i++) {
-  console.log(users[i]);
-  let hobbiesList = "";
-}
-//   for (let j = 0; j < users[i].hobbies.length; j++) {
-//     hobbiesList += `<li>${users[i].hobbies[j]}</li>`;
-//   }
-//   div.innerHTML += `
-//     <h1>Name: ${users[i].name}</h1>
-//     <h2>Age: ${users[i].age}</h2>
-//     <ul>
-//     ${hobbiesList}
-//     </ul>
-//     <hr/>
-//     `;
-// }
 const div = document.querySelector("#users");
+
+for (let i = 0; i < users.length; i++) {
+  let hobbies = "";
+  for (let j = 0; j < users[i].hobbies.length; j++) {
+    hobbies += `<li>${users[i].hobbies[j]}</li>`;
+  }
+  div.innerHTML += `
+  <h1>Name: ${users[i].name}</h1>
+  <h1>Age: ${users[i].age}</h1>
+  <h1>Hobbies</h1>
+  <ul>${hobbies}</ul>
+  <hr/>
+  `;
+}
