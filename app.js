@@ -61,9 +61,9 @@ for (let i = 0; i < users.length; i++) {
     hobbies += `<li>${users[i].hobbies[j]}</li>`;
   }
   div.innerHTML += `
-  <h1>Name: ${users[i].name}</h1>
-  <h1>Age: ${users[i].age}</h1>
-  <h1>Hobbies</h1>
+  <h2>Name: ${users[i].name}</h2>
+  <h3>Age: ${users[i].age}</h3>
+  <h3>Hobbies</h3>
   <ul>${hobbies}</ul>
   <hr/>
   `;
